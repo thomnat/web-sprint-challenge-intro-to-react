@@ -40,10 +40,6 @@ function App() {
     fetchData();
   }, []);
 
-  const handleCardClick = () => {
-    console.log('card clicked!');
-  };
-
 
   // ❗ Create state to hold the data from the API
   // ❗ Create effects to fetch the data and put it in state
@@ -53,9 +49,7 @@ function App() {
       <p>See the README of the project for instructions on completing this challenge</p>
       {/* ❗ Map over the data in state, rendering a Character at each iteration */}
       {characters.map(character => (
-        <div key={character.id} className='character-card'>
-          <Character data={character} onClick={handleCardClick} />
-        </div>
+          <Character data={character} />
       ))}
     </div>
   )
